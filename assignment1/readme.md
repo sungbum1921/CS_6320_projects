@@ -63,7 +63,7 @@ Lower perplexity → better model (indicating higher average likelihood on test 
 |--------|--------------|------------------|----------------|
 | Uni-gram | 0 | High PP | Baseline |
 | Uni-gram | 0.1, 0.01, 0.001 | Moderate PP | Smaller PP than baseline |
-| Bi-gram | 0 | Overfitted PP | Better than Uni-gram |
+| Bi-gram | 0 | Overfitted PP | Worse than uni-gram |
 | Bi-gram | 0.1, 0.01, 0.001 | PP decreases | Optimal k near small positive value |
 
 ---
