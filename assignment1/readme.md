@@ -54,8 +54,9 @@ preventing total probability collapse for unseen events.
 | Model | Smoothing k | Evaluation Metric | Expected Trend |
 |--------|--------------|------------------|----------------|
 | Uni-gram | 0 | High PP | Baseline |
-| Bi-gram | 0 | Moderate PP | Better than Uni-gram |
-| Bi-gram | 0.1, 0.5, 1.0 | PP decreases | Optimal k near small positive value |
+| Uni-gram | 0.1, 0.01, 0.001 | Moderate PP | Smaller PP than baseline |
+| Bi-gram | 0 | Overfitted PP | Better than Uni-gram |
+| Bi-gram | 0.1, 0.01, 0.001 | PP decreases | Optimal k near small positive value |
 
 ---
 
@@ -73,10 +74,10 @@ preventing total probability collapse for unseen events.
 ## 🧾 Example Output
 | Model | k | Perplexity |
 |--------|---|-------------|
-| Uni-gram | – | 823.7 |
-| Bi-gram | 0 | 214.5 |
-| Bi-gram | 0.1 | 199.2 |
-| Bi-gram | 1.0 | 205.4 |
+| Uni-gram | – | 293.23 |
+| Bi-gram | 0 | 2156.58 |
+| Bi-gram | 0.1 | 185.06 |
+| Bi-gram | 1.0 | 429.08 |
 
 ---
 
@@ -86,14 +87,3 @@ preventing total probability collapse for unseen events.
 - Comment on trade-off between model complexity and data sparsity.
 
 ---
-
-## 📚 References
-- Jurafsky & Martin, *Speech and Language Processing*, 3rd Ed. (Ch. 3–4)  
-- Chen & Goodman (1999). *An Empirical Study of Smoothing Techniques for Language Modeling.*
-
----
-
-## 👨‍💻 Author
-**Sungbum Kim**  
-Ph.D. Student, Statistics @ UTD  
-Assignment for **CS 6320 — Natural Language Processing**
