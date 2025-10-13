@@ -50,7 +50,6 @@ preventing total probability collapse for unseen events.
 
 ---
 
-
 ### 4️⃣ Perplexity (PP)
 Evaluates model predictive performance on unseen data:  
 > **PP(W) = 2^(-1/N × Σ log₂ P(wᵢ | wᵢ₋₁))**  
