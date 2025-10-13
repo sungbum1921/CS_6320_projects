@@ -26,29 +26,27 @@ You will also experiment with **add-k smoothing** and evaluate model quality usi
 ## ⚙️ Implementation Summary
 
 ### 1️⃣ Uni-gram Model
-- Estimates word probabilities as  
-  ![formula](https://latex.codecogs.com/svg.image?P(w_i)=\frac{count(w_i)}{N})=\frac{count(w_{i-1},w_i)}{count(w_{i-1})})
-  where \( N \) is the total number of tokens in the training corpus.
+Estimates word probabilities as:  
+> **P(wᵢ) = count(wᵢ) / N**  
+> where **N** is the total number of tokens in the training corpus.
+
+---
 
 ### 2️⃣ Bi-gram Model
-- Estimates conditional probabilities:  
-  \[
-  P(w_i \mid w_{i-1}) = \frac{count(w_{i-1}, w_i)}{count(w_{i-1})}
-  \]
+Estimates conditional probabilities as:  
+> **P(wᵢ | wᵢ₋₁) = count(wᵢ₋₁, wᵢ) / count(wᵢ₋₁)**  
+
+This measures how likely word *wᵢ* follows *wᵢ₋₁* based on observed pairs.
+
+---
 
 ### 3️⃣ Add-k (Laplace) Smoothing
-- Handles zero probabilities using a constant \( k > 0 \):  
-  \[
-  P(w_i \mid w_{i-1}) = \frac{count(w_{i-1}, w_i) + k}{count(w_{i-1}) + kV}
-  \]
-  where \( V \) is the vocabulary size.
+Handles zero probabilities using a constant *k > 0*:  
+> **P(wᵢ | wᵢ₋₁) = (count(wᵢ₋₁, wᵢ) + k) / (count(wᵢ₋₁) + kV)**  
+> where **V** is the vocabulary size.
 
-### 4️⃣ Perplexity (PP)
-- Evaluates model predictive performance on unseen data:  
-  \[
-  PP(W) = 2^{-\frac{1}{N} \sum_{i=1}^N \log_2 P(w_i \mid w_{i-1})}
-  \]
-  - Lower perplexity → better model.
+Smoothing ensures that unseen word pairs receive small non-zero probabilities,  
+preventing total probability collapse for unseen events.
 
 ---
 
