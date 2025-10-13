@@ -27,9 +27,9 @@ You will also experiment with **add-k smoothing** and evaluate model quality usi
 
 ### 1️⃣ Uni-gram Model
 - Estimates word probabilities as  
-  \[
-  P(w_i) = \frac{count(w_i)}{N}
-  \]
+  $$
+   P(w_i) = \frac{count(w_i)}{N}
+  $$
   where \( N \) is the total number of tokens in the training corpus.
 
 ### 2️⃣ Bi-gram Model
