@@ -19,7 +19,7 @@ You will also experiment with **add-k smoothing** and evaluate model quality usi
 |------|--------------|
 | `train.txt` | Training corpus used to build n-gram counts. |
 | `val.txt` | Validation corpus used to compute perplexity. |
-| `assignment1_new.ipynb` | Jupyter notebook implementing the full pipeline (training, smoothing, evaluation). |
+| `assignment1.ipynb` | Jupyter notebook implementing the full pipeline (training, smoothing, evaluation). |
 
 ---
 
@@ -60,7 +60,7 @@ preventing total probability collapse for unseen events.
 ---
 
 ## 🚀 How to Run
-1. Open `assignment1_new.ipynb` in Jupyter Notebook or VSCode.  
+1. Open `assignment1.ipynb` in Jupyter Notebook or VSCode.  
 2. Run all cells in order.  
 3. The notebook will:
    - Build n-gram counts from `train.txt`
