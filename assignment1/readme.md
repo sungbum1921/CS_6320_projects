@@ -50,6 +50,15 @@ preventing total probability collapse for unseen events.
 
 ---
 
+
+### 4️⃣ Perplexity (PP)
+Evaluates model predictive performance on unseen data:  
+> **PP(W) = 2^(-1/N × Σ log₂ P(wᵢ | wᵢ₋₁))**  
+
+Lower perplexity → better model (indicating higher average likelihood on test data).
+
+---
+
 ## 🧩 Experiment Plan
 | Model | Smoothing k | Evaluation Metric | Expected Trend |
 |--------|--------------|------------------|----------------|
