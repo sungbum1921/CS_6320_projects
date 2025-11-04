@@ -171,5 +171,3 @@ The model achieving the **highest validation accuracy** is selected as the final
 **Course:** CS6320 - Natural Language Processing
 **Assignment:** #2 (Feedforward and Recurrent Neural Networks)
 **Semester:** Fall 2025
-
-```
