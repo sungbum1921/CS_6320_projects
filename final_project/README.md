@@ -81,7 +81,7 @@ python model_training/train_7b_qlora.py
 ### ⚠️ Note on Model Weights
 Successfully running these scripts will generate trained model files (e.g., `model.safetensors`, `pytorch_model.bin`) inside the `model_training/t5_small/`, `model_training/t5_base/`, etc. directories.
 
-**Important:** These generated model weights are **too large** to be uploaded to GitHub. They are automatically configured to be **ignored** by this repository's `.gitignore`. 
+**Important:** These generated model weights are **too large** to be uploaded to GitHub.
 *   If you are cloning this repo, you will need to re-train the models locally or obtain the weights from an external source if provided.
 *   The application expects these files to exist in their respective folders to function correctly.
 
