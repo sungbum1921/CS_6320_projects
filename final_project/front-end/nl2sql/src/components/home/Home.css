@@ -1,0 +1,359 @@
+.elevated-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    height: calc(100vh - 65px);
+    gap: 10px;
+}
+
+/* Main layout wrappers */
+.content-wrapper {
+    display: flex;
+    gap: 20px;
+    width: 60%;
+    height: auto;
+    flex: 1;
+    min-height: 0;
+    padding-bottom: 20px;
+}
+
+.elevated-box {
+    flex: 1;
+    /* Take equal space, or adjust flex-grow */
+    width: 100%;
+    /* Reset width from fixed 60% */
+    height: 100%;
+    overflow: hidden;
+    /* background-image: linear-gradient(to top left, #e8e7e7 5%, #d4d4d4 80%, #cbcbcb 5%); */
+
+    background-image: none !important;
+    background-color: #e8e7e7;
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 16px;
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.1),
+        0 10px 15px rgba(0, 0, 0, 0.15),
+        0 20px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-direction: column;
+}
+
+.chat-container {
+    flex: 1;
+    width: 100%;
+    padding: 50px 15px 15px 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-sizing: border-box;
+}
+
+.message {
+    max-width: 70%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    word-break: break-word;
+    font-family: 'Sans Serif';
+}
+
+.message.user {
+    background: #dcdcdc;
+    color: black;
+    align-self: flex-end;
+    text-align: right;
+    box-shadow: none;
+}
+
+.message.response {
+    background: transparent;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+    align-self: flex-start;
+    box-shadow: none;
+    padding-left: 0;
+}
+
+.input-container {
+    flex-shrink: 0;
+    padding: 20px;
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 25px;
+    display: flex;
+    align-items: center;
+    border: none !important;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 15px 70px 15px 25px;
+    border-radius: 50px;
+    border: 1px solid #eee;
+    outline: none;
+    font-size: 16px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    height: 20px;
+}
+
+.button-wrapper {
+    position: absolute;
+    right: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin-top: -3px;
+}
+
+.icon-button,
+.icon-button-1 {
+    background: #444444 !important;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    margin: 0 !important;
+    margin-left: 10px !important;
+    padding: 0;
+}
+
+.icon-image {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-button:hover,
+.icon-button-1:hover {
+    background: #000 !important;
+}
+
+.icon-image {
+    width: 18px;
+    height: 18px;
+    filter: invert(1);
+    display: block;
+}
+
+.message.response {
+    position: relative;
+}
+
+.cursor {
+    animation: blink 1s step-end infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+
+
+.scrollable-hidden {
+    overflow: auto;
+    -ms-overflow-style: none;
+    /* IE/Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.scrollable-hidden::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari/Opera */
+}
+
+/* Model Selector Styles */
+.model-selector {
+    background-color: #e0e0e0;
+    margin-top: 12px;
+    margin-bottom: -4px;
+    padding: 4px;
+    border-radius: 12px;
+    display: flex;
+    gap: 4px;
+}
+
+/* Memo Box Styles */
+.memo-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.memo-header {
+    padding: 15px 20px 0 20px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+}
+
+.memo-textarea {
+    flex: 1;
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-family: inherit;
+    resize: none;
+    outline: none;
+    box-sizing: border-box;
+    color: inherit;
+}
+
+.dark-mode .memo-header {
+    color: #e0e0e0;
+}
+
+.dark-mode .memo-textarea {
+    color: #e0e0e0;
+}
+
+.model-btn {
+    padding: 8px 16px;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    transition: all 0.2s ease;
+}
+
+.model-btn.active {
+    background-color: white;
+    color: #000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Clear Chat Button */
+.clear-chat-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #888;
+    opacity: 0.6;
+    transition: all 0.2s ease;
+    z-index: 10;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.clear-chat-btn:hover {
+    opacity: 1;
+    color: #ff4d4d;
+    /* Red color on hover for delete action */
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .clear-chat-btn {
+    color: #aaa;
+}
+
+.dark-mode .clear-chat-btn:hover {
+    color: #ff6b6b;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.model-btn:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Dark Mode adaptation for Selector */
+.dark-mode .model-selector {
+    background-color: #333;
+}
+
+.dark-mode .model-btn {
+    color: #aaa;
+}
+
+.dark-mode .model-btn.active {
+    background-color: #555;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .model-btn:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Dark Mode Styles --- */
+.dark-mode .elevated-container {
+    background-image: none !important;
+    background-color: #1a1a1a !important;
+}
+
+.dark-mode .elevated-box {
+    background-image: none !important;
+    background-color: #262626 !important;
+    color: #e0e0e0;
+    box-shadow: none !important;
+}
+
+.dark-mode .input-container {
+    background-color: transparent !important;
+    border-top: none !important;
+}
+
+.dark-mode .input-container input {
+    background-color: #3d3d3d !important;
+    color: white !important;
+    border: 1px solid #555 !important;
+}
+
+.dark-mode .icon-image {
+    filter: invert(1) brightness(2);
+}
+
+.dark-mode .message.user {
+    background: #3a3a3a !important;
+    color: white !important;
+    box-shadow: none !important;
+}
+
+.dark-mode .message.response {
+    background: transparent !important;
+    color: white !important;
+    box-shadow: none !important;
+    padding-left: 0 !important;
+}
+
+.dark-mode .icon-button,
+.dark-mode .icon-button-1 {
+    background-color: #b0b0b0 !important;
+}
+
+.dark-mode .icon-button:hover,
+.dark-mode .icon-button-1:hover {
+    background-color: #ffffff !important;
+}
+
+.dark-mode .icon-button .icon-image,
+.dark-mode .icon-button-1 .icon-image {
+    filter: invert(0) !important;
+}
