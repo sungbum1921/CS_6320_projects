@@ -74,6 +74,9 @@ To train a specific model, run the corresponding script in the `model_training` 
 # Train T5-Small
 python model_training/train_t5_small.py
 
+# Train T5-Base
+python model_training/train_t5_base.py
+
 # Train Code Llama 7B (Requires GPU)
 python model_training/train_7b_qlora.py
 ```
