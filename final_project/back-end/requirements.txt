@@ -1,0 +1,12 @@
+transformers
+torch
+SentencePiece
+sqlalchemy
+fastapi
+pydantic
+uvicorn
+peft
+bitsandbytes
+accelerate
+scipy
+protobuf

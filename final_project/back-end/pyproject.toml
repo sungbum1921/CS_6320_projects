@@ -1,0 +1,12 @@
+[project]
+name = "blockhouse-backend"
+version = "0.1.0"
+description = "Work Trial Task"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "databases>=0.9.0",
+    "fastapi[standard]>=0.115.8",
+    "psycopg2>=2.9.10",
+    "sqlalchemy>=2.0.38",
+]
