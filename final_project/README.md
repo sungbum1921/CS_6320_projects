@@ -115,6 +115,3 @@ npm start
 *   **`front-end/`**: React application source code.
 *   **`model_training/`**: Contains training scripts (`train_t5_small.py`, `train_7b_qlora.py`) and the saved model artifacts (`t5_small`, `codellama_7b_QLoRA`).
 *   **`result_summary/`**: Evaluation reports and detailed training logs.
-
-## 📊 Model Evaluation
-For a detailed performance comparison between T5 and Code Llama, including VRAM usage and accuracy metrics, please refer to [comprehensive_model_evaluation.md](./result_summary/comprehensive_model_evaluation.md).
